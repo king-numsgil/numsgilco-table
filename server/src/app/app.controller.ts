@@ -14,7 +14,7 @@ export class AppController implements IAppController {
             return new HttpResponseNotFound();
         }
 
-        let scripts = "";
+        let scripts;
         if (process.env.NODE_ENV === "production") {
             const file = await readFile("public/manifest.json");
             const json = JSON.parse(file.toString());
