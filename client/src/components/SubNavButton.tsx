@@ -38,7 +38,8 @@ interface SubNavButtonProps {
 
 export const SubNavButton: FC<SubNavButtonProps> = ({children, link}) =>
     <Link
-        p={2}
+        py={1}
+        px={3}
         borderRadius={5}
         background={useColorModeValue("gray.100", "whiteAlpha.200")}
         transition="all 200ms"
@@ -61,7 +62,7 @@ export const SubNavGroup: FC<PropsWithChildren<FlexProps>> = ({children, ...rest
     <Flex
         direction="row"
         alignItems="center"
-        gap={1}
+        gap={3}
         {...rest}
     >
         {children}

@@ -66,8 +66,8 @@ const MobileNav: FC<MobileProps> = ({onOpen, ...rest}) => {
 
     return <Flex
         ml={{base: 0, md: 60}}
-        px={{base: 4, md: 4}}
-        height={20}
+        px={{base: 4, md: 2}}
+        height={14}
         alignItems="center"
         bg={useColorModeValue("green.400", "green.700")}
         justifyContent={{base: "space-between", md: "flex-end"}}
@@ -91,7 +91,7 @@ const MobileNav: FC<MobileProps> = ({onOpen, ...rest}) => {
             Numsgil Co
         </Text>
 
-        <HStack spacing={{base: 0, md: 6}}>
+        <HStack spacing={{base: 0, md: 2}}>
             <ColorModeToggle />
             <IconButton
                 size="lg"

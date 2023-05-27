@@ -2276,7 +2276,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"better-sqlite3@npm:~8.4.0":
+"better-sqlite3@npm:^8.4.0":
   version: 8.4.0
   resolution: "better-sqlite3@npm:8.4.0"
   dependencies:
@@ -4715,7 +4715,7 @@ __metadata:
     "@foal/core": ^3.2.0
     "@foal/typeorm": ^3.2.0
     "@types/node": 20.2.3
-    better-sqlite3: ~8.4.0
+    better-sqlite3: ^8.4.0
     concurrently: ~8.0.1
     source-map-support: ~0.5.21
     supervisor: ~0.12.0
