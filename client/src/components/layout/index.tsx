@@ -1,4 +1,5 @@
 import {FC, PropsWithChildren} from "react";
+import {AiOutlineUser} from "react-icons/ai";
 import {FiMenu} from "react-icons/fi";
 import {
     Box,
@@ -15,6 +16,7 @@ import {
 
 import {ColorModeToggle} from "./ColorModeButton";
 import {SidebarContent} from "./SidebarContent";
+import {UserControl} from "./UserControl.tsx";
 
 // from https://chakra-templates.dev/
 
@@ -89,6 +91,7 @@ const MobileNav: FC<MobileProps> = ({onOpen, ...rest}) => {
 
         <HStack spacing={{base: 0, md: 2}}>
             <ColorModeToggle />
+            <UserControl />
         </HStack>
     </Flex>;
 };

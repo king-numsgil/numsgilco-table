@@ -48,6 +48,7 @@ export const NavItem: FC<NavItemProps> = ({icon, children, link, ...rest}) =>
             align="center"
             p={4}
             mr={4}
+            my={2}
             borderRightRadius="lg"
             role="group"
             cursor="pointer"
