@@ -2,7 +2,6 @@
     "name": "numsgilco-table",
     "packageManager": "yarn@3.5.1",
     "workspaces": [
-        "common",
         "server",
         "client"
     ]

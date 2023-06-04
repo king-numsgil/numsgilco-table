@@ -1,5 +1,5 @@
 {
-    "name": "server",
+    "name": "@numsgilco-table/server",
     "private": true,
     "version": "0.0.0",
     "description": "description of the application",

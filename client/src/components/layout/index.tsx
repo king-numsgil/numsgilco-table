@@ -1,5 +1,4 @@
 import {FC, PropsWithChildren} from "react";
-import {AiOutlineUser} from "react-icons/ai";
 import {FiMenu} from "react-icons/fi";
 import {
     Box,
