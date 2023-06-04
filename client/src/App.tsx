@@ -3,6 +3,7 @@ import {ChakraProvider, ColorModeScript, createStandaloneToast} from "@chakra-ui
 import {HelmetProvider} from "react-helmet-async";
 import {FC} from "react";
 
+import {StoreProvider} from "./state";
 import {routes} from "./pages";
 import {theme} from "./theme";
 
@@ -18,9 +19,11 @@ export const App: FC = () => {
         <ChakraProvider theme={theme} resetCSS>
             <HelmetProvider>
                 <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-                <Router location={location} routes={routes}>
-                    <Outlet />
-                </Router>
+                <StoreProvider>
+                    <Router location={location} routes={routes}>
+                        <Outlet />
+                    </Router>
+                </StoreProvider>
             </HelmetProvider>
         </ChakraProvider>
     </>;

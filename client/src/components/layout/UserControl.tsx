@@ -19,6 +19,8 @@ import {
     useDisclosure
 } from "@chakra-ui/react";
 
+import {useStore, store} from "../../state";
+
 type LoginFormProps = {
     isOpen: boolean;
     onClose: () => void;
@@ -45,6 +47,10 @@ const LoginForm: FC<LoginFormProps> = props => {
         return new Promise<void>((resolve) => {
             setTimeout(() => {
                 alert(JSON.stringify(values, null, 2));
+                store.get()?.setUser({
+                    id: 1,
+                    email: values.email,
+                });
                 props.onClose();
                 resolve();
             }, 3000);
@@ -98,16 +104,26 @@ const LoginForm: FC<LoginFormProps> = props => {
 
 export const UserControl: FC = () => {
     const {isOpen, onOpen, onClose} = useDisclosure();
+    const user = useStore(state => state.user);
 
-    return <>
-        <LoginForm onClose={onClose} isOpen={isOpen} />
+    if (user === null) {
+        return <>
+            <LoginForm onClose={onClose} isOpen={isOpen} />
 
-        <IconButton
+            <IconButton
+                size="lg"
+                variant="ghost"
+                aria-label="open menu"
+                icon={<AiOutlineUser />}
+                onClick={onOpen}
+            />
+        </>;
+    } else {
+        return <IconButton
             size="lg"
             variant="ghost"
             aria-label="open menu"
             icon={<AiOutlineUser />}
-            onClick={onOpen}
-        />
-    </>;
+        />;
+    }
 }
